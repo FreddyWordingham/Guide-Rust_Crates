@@ -45,8 +45,8 @@ fn main() {
         [args.width, args.height],
         args.max_iters,
     );
-    let mut img = colour::image(data, cmap, args.max_iters);
-    colour::encode(&mut img)
+    let img = colour::image(data, cmap, args.max_iters);
+    colour::encode(&img)
         .save(output_dir.join("mandy.png"))
         .unwrap();
 }

@@ -77,6 +77,10 @@ Then run the program with the following command:
 cargo run --bin main --release -- --real 0.428832585319999 --imag 0.231349121850911 --scale 1.0e-8 --max-iters 1000 --width 1920 --height 1080 --cmap 062B79 16498A 5995B7 FAFBBD FDE050 F1B351 FF0000
 ```
 
+You should see a new file in the `output` directory called `mandy.png`:
+
+![Mandelbrot set](./output/mandy.png)
+
 ## Return
 
 [Return to the top-level README](./../../README.md)

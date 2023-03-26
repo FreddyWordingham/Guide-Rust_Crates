@@ -60,13 +60,31 @@ pub fn image(data: Array2<u16>, cols: Vec<&str>, max_iter: u16) -> Array3<u8> {
 
 /// Encode an RGB image array as an image.
 pub fn encode(arr: &Array3<u8>) -> RgbImage {
-    let (width, height, _) = arr.dim();
+    let img = transpose(&arr);
+    let (width, height, _) = img.dim();
+
     RgbImage::from_vec(
         height as u32,
         width as u32,
-        arr.as_slice().unwrap().to_vec(),
+        img.view().as_slice().unwrap().to_vec(),
     )
     .expect("Container should have the right size for the image dimensions.")
+}
+
+/// Transpose an RGB image array, fipping it along the diagonal.
+pub fn transpose(arr: &Array3<u8>) -> Array3<u8> {
+    let (width, height, _) = arr.dim();
+    let mut buffer = Array3::zeros((height, width, 3));
+
+    for n in 0..(width * height) {
+        let xi = n % width;
+        let yi = n / width;
+        buffer
+            .slice_mut(s![yi, xi, ..])
+            .assign(&arr.slice(s![xi, yi, ..]));
+    }
+
+    buffer
 }
 ```
 
@@ -116,6 +134,10 @@ Execute the program with:
 ```shell
 cargo run --bin main --release
 ```
+
+You should see a new file in the `output` directory called `mandy.png`:
+
+![Mandelbrot set](./output/mandy.png)
 
 ## Return
 
