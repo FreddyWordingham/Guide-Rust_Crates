@@ -3,7 +3,7 @@
 Now we have a working program, let's add a command line interface to it.
 This will allow us to pass in the parameters we want to use when generating the image, instead of having to edit the source code each time.
 
-## Add clap
+## Add Dependencies
 
 Add `clap`, a command line argument parser library, to the project:
 
