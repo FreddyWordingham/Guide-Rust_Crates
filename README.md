@@ -9,3 +9,4 @@ How to build Rust crates using Cargo.
 ## Chapters
 
 -   [0 Setup](./chapters/0-Setup/README.md)
+-   [1 Binaries](./chapters/1-Binaries/README.md)
