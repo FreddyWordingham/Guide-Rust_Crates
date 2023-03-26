@@ -14,3 +14,4 @@ How to build Rust crates using Cargo.
 -   [3 Test](./chapters/3-Test/README.md)
 -   [4 Plotting](./chapters/4-Plotting/README.md)
 -   [5 Images](./chapters/5-Images/README.md)
+-   [6 CLI](./chapters/6-CLI/README.md)
