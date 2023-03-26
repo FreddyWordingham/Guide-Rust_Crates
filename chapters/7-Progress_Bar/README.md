@@ -44,12 +44,12 @@ pub fn area(real: f64, imag: f64, scale: f64, res: [usize; 2], max_iters: u16) -
 }
 ```
 
-## Try it out
+## Try it
 
 Then run the program with the following command:
 
 ```shell
-cargo run --bin main --release -- --real 0.39 --imag 0.235 --scale 1.0e-2 --max-iters 400 --width 1920 --height 1080 --cmap 062B79 16498A 5995B7 FAFBBD FDE050 F1B351 FFBB00
+cargo run --bin main --release -- --real 0.39 --imag 0.235 --scale 1.0e-2 --max-iters 400 --width 1920 --height 1080 --cmap 062B79 16498A 5995B7 FAFBBD FDE050 F1B351
 ```
 
 You should see a progress bar as the plot is rendered.
