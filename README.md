@@ -11,3 +11,4 @@ How to build Rust crates using Cargo.
 -   [0 Setup](./chapters/0-Setup/README.md)
 -   [1 Binaries](./chapters/1-Binaries/README.md)
 -   [2 Library](./chapters/2-Library/README.md)
+-   [3 Test](./chapters/3-Test/README.md)

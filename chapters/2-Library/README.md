@@ -65,7 +65,9 @@ fn main() {
 }
 ```
 
-Then run the it with:
+## Try it
+
+Run the `main` program with:
 
 ```shell
 cargo run --bin main --release
